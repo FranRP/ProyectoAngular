@@ -1,0 +1,86 @@
+.titulo {
+  background-color: rgb(247, 32, 32);
+  padding: 0px 14px 7px 14px;
+  text-align: center;
+
+}
+
+h1 {
+  margin: 0;
+  color: white;
+  font-size: 5em;
+  font-weight: bold;
+  letter-spacing: -5px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.classic {
+  background-color: black;
+}
+
+.hulk {
+  background-color: #40bd15;
+}
+
+.hulkmarvel {
+  background-color: rgb(15, 74, 0);
+}
+
+.wolverinemarvel {
+  background-color: #115bff;
+}
+
+.breadcrumb::after {
+  display: inline;
+}
+
+
+.wolverine {
+  background-color: #a5ba00;
+}
+
+.america {
+  background-color: rgb(157, 176, 255);
+}
+
+.americamarvel {
+  background-color: rgb(0, 33, 255);
+}
+
+
+
+
+.menu {
+  margin-top: 10px;
+}
+
+.enlaces {
+  display: flex;
+  align-items: center;
+}
+
+.icon-success {
+  font-size: 25px;
+  color: white;
+}
+
+.migas {
+  text-align: center;
+}
+
+.breadcrumb-item a {
+  color: black;
+}
+
+.panel {
+  justify-content: center;
+  margin:0px;
+}

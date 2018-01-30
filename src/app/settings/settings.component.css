@@ -1,0 +1,23 @@
+h1 {
+  font-size: 15px;
+  margin: 10px 0px 10px 0px;
+  cursor: pointer;
+
+}
+
+
+.opciones {
+  text-align: center;
+}
+
+.wolverine {
+  color: rgb(128, 136, 37);
+}
+
+.hulk {
+  color: rgb(8, 99, 0);
+}
+
+.america {
+  color: rgb(60, 56, 255);
+}

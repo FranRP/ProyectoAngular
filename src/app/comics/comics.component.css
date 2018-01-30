@@ -1,0 +1,52 @@
+.titular {
+  justify-content: center;
+  background-color: #200301;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+img {
+  max-height: 250px;
+  width: 100%;
+}
+
+.masinfo {
+  min-height: 500px;
+}
+
+.columnas div:nth-last-child(-n+2) div:last-child {
+  display: none;
+}
+
+.columnas div:last-child {
+  display: none;
+}
+
+#info {
+  display: none;
+}
+
+p, a {
+  font-size: 15px;
+  font-family: "Forgotten Future";
+}
+
+.columnas {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 30px 0px 30px 0px;
+}
+
+.comic {
+  width: 200px;
+  margin-right: 20px;
+  height: 250px;
+  box-shadow: 5px 5px 10px #999;
+  border: 2px solid;
+}
+
+@media (max-width: 510px) {
+  .columnas {
+    flex-flow: row wrap;
+  }
+}

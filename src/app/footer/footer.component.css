@@ -1,0 +1,18 @@
+.pie {
+  padding: 20px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+.hulk {
+  background-color: #196000;
+}
+
+.wolverine {
+  background-color: #a5ba00;
+}
+
+.america {
+  background-color: rgb(157, 176, 255);
+}

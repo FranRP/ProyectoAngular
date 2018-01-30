@@ -1,0 +1,71 @@
+.titular {
+  justify-content: center;
+  background-color: #200301;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+img {
+  max-height: 250px;
+  width: 100%;
+}
+
+.filtros {
+  text-align: center;
+  border: 3px solid;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px 0px 35px 0px;
+}
+
+.container {
+  margin-bottom: 150px;
+}
+
+h2 {
+  font-family: 'marvel';
+  font-size: 15px;
+}
+
+select {
+  border: 0px;
+}
+
+.botones {
+  text-align: center;
+}
+
+button {
+  margin-top: 50px;
+  border: 0px;
+  background-color: inherit;
+  background: none;
+  font-size: 90px;
+}
+
+.titulares {
+  margin-bottom: 30px;
+}
+
+#filtro {
+  margin-top: 0px;
+  font-size: 10px;
+}
+
+.pj {
+  width: 150px;
+  height: 250px;
+  box-shadow: 5px 5px 10px #999;
+  border: 2px solid;
+}
+
+.personajes:hover {
+  z-index: 99;
+  transform: scale(1.2);
+}
+
+.personajes {
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+}

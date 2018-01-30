@@ -1,0 +1,9 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3 opciones" *ngFor="let tema of arrayTemas">
+      <div class="">
+        <h1 class="{{tema.nombre}}" (click) = "cambiarTema($event)">Tema {{tema.nombre}}</h1>
+      </div>
+    </div>
+  </div>
+</div>

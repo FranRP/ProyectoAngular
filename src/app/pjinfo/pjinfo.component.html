@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row">
+    <div class="col-3 lin">
+      <div class="row linea">
+        <div class="col-12">
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <h1>Heroe&nbsp;&nbsp;&nbsp; seleccionado</h1>
+    </div>
+  </div>
+  <div class="row" *ngIf="variable != undefined">
+    <div class="col-md-4 col-12">
+      <div class="info">
+        <img src="{{variable.thumbnail.path}}/standard_fantastic.{{variable.thumbnail.extension}}" alt="">
+      </div>
+    </div>
+    <div class="col-md-8 col-12">
+      <div class="info" *ngIf="variable.description != '' ; else SinDescripccion">
+        <h1>Nombre</h1>
+        <h3>{{variable.name}}</h3>
+        <h1>Descripcion</h1>
+        <p>{{variable.description}}</p>
+      </div>
+      <ng-template #SinDescripccion>
+        <div class="info">
+          <h1>Nombre</h1>
+          <h3>{{variable.name}}</h3>
+          <h1>Descripcion</h1>
+          <p>No hay ninguna descripcción disponible en estos momentos</p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+  <div class="row" *ngIf="variable != undefined">
+    <div class="col-12">
+      <div class="masDatos">
+        <h3>series en las que {{variable.name}} aparece:</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="variable != undefined">
+    <div class="col-12 separado" *ngIf="arraySeries.length != 0; else SinSeries">
+      <span *ngFor="let elemento of arraySeries"><em>{{elemento.name}},&nbsp;</em></span>
+    </div>
+    <ng-template #SinSeries>
+      <div class="col-12 separado">
+        <span>No se han encontrado resultados</span>
+      </div>
+    </ng-template>
+
+  </div>
+  <div class="row" *ngIf="variable != undefined">
+    <div class="col-12">
+      <div class="masDatos">
+        <h3>Stories en las que {{variable.name}} aparece:</h3>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="variable != undefined">
+    <div class="col-12 separado" *ngIf="arrayStories.length != 0; else SinStories">
+      <span *ngFor="let elemento of arrayStories"><em>{{elemento.name}},&nbsp;</em></span>
+    </div>
+    <ng-template #SinStories>
+      <div class="col-12 separado">
+        <span>No se han encontrado resultados</span>
+      </div>
+    </ng-template>
+
+  </div>
+
+  <div class="row">
+    <div class="col-12 regreso">
+      <button type="button" name="button" routerLinkActive="active" [routerLink]="['/characters']"
+              class="glyphicon glyphicon-arrow-left"></button>
+    </div>
+  </div>
+</div>

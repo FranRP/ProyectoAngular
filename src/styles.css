@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'marvel';
+  src: url('bebas/BEBAS.ttf');
+}
+
+@font-face {
+  font-family: 'ironman';
+  src: url('iron/Ironman.ttf');
+}
+
+h1 {
+  font-family: 'marvel';
+}
+
+@font-face {
+  font-family: "Forgotten Future";
+  src: url('forgotten/forgottenfuturistbd.ttf');
+}
+
+body {
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url('assets/fondo.png');
+}
+
+
+.lin {
+  margin-top: 28px;
+}
+
+
+
+
+.linea {
+  background-color: #000000;
+  left: 0px;
+  transform: skew(-20deg);
+  -webkit-transform: skew(-20deg);
+}

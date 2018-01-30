@@ -1,0 +1,23 @@
+
+a {
+  display: inline;
+  color: #535353 !important;
+  font-family: 'marvel';
+  font-size: 20px;
+  margin: 0px 20px 0px 20px;
+}
+
+
+span:hover {
+  color:white;
+  cursor: pointer;
+}
+
+.prueba {
+  background: green;
+}
+
+
+.container {
+  flex-direction: row;
+}

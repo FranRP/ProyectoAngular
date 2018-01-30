@@ -1,0 +1,12 @@
+img {
+  max-height: 560px;
+}
+
+div {
+  text-align: center;
+}
+
+.alinear {
+  display: flex;
+  align-items: center;
+}

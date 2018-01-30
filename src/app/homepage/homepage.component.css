@@ -1,0 +1,48 @@
+#carouselExampleControls {
+  width: 90%;
+  border: 2px solid;
+}
+
+img {
+  max-height: 400px;
+  width: 100%;
+}
+
+#consejo {
+  max-width: 300px;
+  height: auto;
+}
+
+.consejo-dead {
+  margin: 50px 50px 0px 50px;
+}
+
+.texto, .cons {
+  text-align: center;
+  font-size: 20px;
+}
+
+p {
+  font-family: "Forgotten Future";
+}
+
+.slidex {
+  background-color: #3c3c3c;
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  margin-top: 50px;
+}
+
+.linea {
+  background-color: #000000;
+  left: 0px;
+  transform: skew(-20deg);
+  -webkit-transform: skew(-20deg);
+}
+
+.lin {
+  margin-top: 28px;
+}

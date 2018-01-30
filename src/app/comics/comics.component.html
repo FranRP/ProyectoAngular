@@ -1,0 +1,60 @@
+<div class="container-fluid">
+  <div class="row titular">
+    <div class="col-12"><img src="./assets/marvel3.jpg" class="img-fluid" alt="Responsive image"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-3 lin">
+        <div class="row linea">
+          <div class="col-12">
+            <p>&nbsp;</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-9">
+        <h1>Listado&nbsp;&nbsp;&nbsp; de&nbsp;&nbsp;&nbsp; Comics</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h4>Escribe el nombre de un comic para filtrar, si está en la página, se mostrará: </h4>
+      </div>
+      <div class="col-12">
+        <input type="text" name="" value="" [(ngModel)] = "filtro">
+      </div>
+    </div>
+    <div class="row masinfo" infiniteScroll
+         [infiniteScrollDistance]="1"
+         [infiniteScrollThrottle]="50"
+         (scrolled)="prueba()">
+      <div (click) = 'mostrar($event)' class="col-12 col-lg-12 columnas" *ngFor="let elemento of arrayComics | buscarcomic:filtro">
+        <div class="">
+          <img class="comic" src="{{elemento.thumbnail.path}}/portrait_xlarge.{{elemento.thumbnail.extension}}" alt="">
+        </div>
+        <div class="">
+          <div>
+            <h3>Titulo</h3>
+            <p>{{elemento.title}}</p>
+          </div>
+          <div class="{{elemento.id}}">
+            <h3>Formato</h3>
+            <p>{{elemento.format}}</p>
+            <h3>Más datos</h3>
+            <a href="{{elemento.urls[0].url}}">Página oficial de este Comic</a>
+          </div>
+        </div>
+        <div class="{{elemento.id}}" *ngIf="elemento.description != null; else SinDescripcion">
+          <h3>Descripcion</h3>
+          <p>{{elemento.description}}</p>
+        </div>
+        <ng-template #SinDescripcion>
+          <div class="{{elemento.id}}">
+            <h3>Descripcion</h3>
+            <p>No se han encontrado resultados, prueba cualquiera de los otros Comics, es muy probable que muchos no contengan descripción por parte de la API</p>
+          </div>
+        </ng-template>
+      </div>
+    </div>
+</div>

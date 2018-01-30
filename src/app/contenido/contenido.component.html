@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="row titular">
+    <div class="col-12"><img id="imgtitular" src="./assets/marvel4.png" class="img-fluid" alt="Responsive image"></div>
+  </div>
+</div>
+<div class="container informacion">
+  <div class="row separacion">
+    <div class="col-3 lin">
+      <div class="row linea">
+        <div class="col-12">
+          <p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-9">
+      <h1 id="titulico">Listado&nbsp;&nbsp;&nbsp; de&nbsp;&nbsp;&nbsp; Eventos</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <p>Filtrar la busqueda de eventos: <input type="text" name="" value="" [(ngModel)]="filtro"></p>
+    </div>
+    <div class="col-12" *ngFor="let elemento of arrayContenido | buscarcomic:filtro">
+      <div class="row">
+        <div class="col-md-2 col-sm-6 valores">
+          <img src="{{elemento.thumbnail.path}}/portrait_incredible.jpg" alt="">
+        </div>
+        <div class="col-md-5 col-sm-12">
+          <div class="info">
+            <h4>TITULO</h4>
+            <p>{{elemento.title}}</p>
+            <h4>DESCRIPCION</h4>
+            <p>{{elemento.description}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row separador">
+        <div class="col-12 separador">
+          <button class="btn btn-dark" type="button" data-toggle="collapse" [attr.data-target]="'#'+elemento.id"
+                  aria-expanded="false" aria-controls="multiCollapseExample2">Desplegar más información
+          </button>
+        </div>
+        <div class="col-12">
+          <div class="collapse multi-collapse" id="{{elemento.id}}">
+            <div class="card card-body">
+              <h1>Fecha de inicio del evento</h1>
+              <p>{{elemento.start}}</p>
+              <h1>Fecha de finalizacion del evento</h1>
+              <p>{{elemento.end}}</p>
+              <h1>Evento previo / Evento posterior</h1>
+              <p>{{elemento.previous?.name}} / {{elemento.next?.name}}</p>
+              <h1>Series relacionadas con este evento</h1>
+              <div>
+                <span *ngFor="let variable of elemento.series.items"><em> - {{variable.name}}</em></span>
+              </div>
+              <h1>Algunos personajes de este evento</h1>
+              <div>
+                <span *ngFor="let variable of elemento.characters.items"><em> - {{variable?.name}}</em></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
